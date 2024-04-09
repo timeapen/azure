@@ -4,23 +4,19 @@ using WebApplication1.Models;
 namespace WebApplication1.Services
 {
 
-    public class ProductService
+    public class ProductService: IProductService
     {
 
-        private static string db_source = "sidhusanto.database.windows.net";
-        private static string db_user = "santo";
-        private static string db_password = "Sidissmall13#";
-        private static string db_database = "santodb";
+        private readonly IConfiguration _configuration;
+
+        public ProductService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
 
         private SqlConnection GetConnection()
         {
-            var _builder = new SqlConnectionStringBuilder();
-            _builder.DataSource = db_source;
-            _builder.UserID = db_user;
-            _builder.Password = db_password;
-            _builder.InitialCatalog = db_database;
-
-            return new SqlConnection(_builder.ConnectionString);
+            return new SqlConnection(_configuration.GetConnectionString("SQLConnection"));
         }
 
         public List<Product> GetProducts()

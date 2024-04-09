@@ -36,3 +36,4 @@
 /Users/eapent/dev/azure/WebApplication1/bin/Debug/net8.0/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll
 /Users/eapent/dev/azure/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.AssemblyReference.cache
 /Users/eapent/dev/azure/WebApplication1/obj/Debug/net8.0/WebAppli.7D14BD69.Up2Date
+/Users/eapent/dev/azure/WebApplication1/obj/Debug/net8.0/WebApplication1.sourcelink.json
