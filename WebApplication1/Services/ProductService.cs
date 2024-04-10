@@ -8,6 +8,8 @@ namespace WebApplication1.Services
     {
 
         private readonly IConfiguration _configuration;
+        private readonly ILogger _logger;
+
 
         public ProductService(IConfiguration configuration)
         {
@@ -16,6 +18,7 @@ namespace WebApplication1.Services
 
         private SqlConnection GetConnection()
         {
+            _logger.LogInformation("Getting SQL Connection");
             return new SqlConnection(_configuration.GetConnectionString("SQLConnection"));
         }
 
