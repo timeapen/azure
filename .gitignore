@@ -1,0 +1,7 @@
+/.DS_Store
+/.vscode
+
+# Build results
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
