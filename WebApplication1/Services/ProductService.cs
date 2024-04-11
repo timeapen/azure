@@ -11,9 +11,10 @@ namespace WebApplication1.Services
         private readonly ILogger _logger;
 
 
-        public ProductService(IConfiguration configuration)
+        public ProductService(IConfiguration configuration, ILogger logger)
         {
             _configuration = configuration;
+            _logger = logger;
         }
 
         private SqlConnection GetConnection()
