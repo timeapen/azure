@@ -7,14 +7,12 @@ namespace WebApplication1.Pages;
 
 public class IndexModel : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
     private readonly IProductService _productService;
     public List<Product> Products;
 
 
-    public IndexModel(ILogger<IndexModel> logger, IProductService productService)
+    public IndexModel(IProductService productService)
     {
-        _logger = logger;
         _productService = productService;
     }
 

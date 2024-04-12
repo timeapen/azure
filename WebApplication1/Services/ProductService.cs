@@ -8,10 +8,10 @@ namespace WebApplication1.Services
     {
 
         private readonly IConfiguration _configuration;
-        private readonly ILogger _logger;
+        private readonly ILogger<ProductService> _logger;
 
 
-        public ProductService(IConfiguration configuration, ILogger logger)
+        public ProductService(IConfiguration configuration, ILogger<ProductService> logger)
         {
             _configuration = configuration;
             _logger = logger;
